@@ -6,6 +6,10 @@
 
 ![](screenshots/Ng-Rx-example.png)
 
+## Link
+
+[Live Link](https://jdegand.github.io/NgRx-example)
+
 ## Built With
 
 - [Angular](https://angular.io)
