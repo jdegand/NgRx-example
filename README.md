@@ -18,10 +18,10 @@
 
 ## Thoughts
    
-- The main walkthrough tutorial takes a shortcut and doesn't add effects and just directly calls the service class in `app.component.ts`.
+- The main walkthrough tutorial takes a shortcut, and doesn't add effects, and just directly calls the service class in `app.component.ts`.
 - I removed the direct call to the service and added ngrx effects.  
-- My implementation could be improved.  An error action could be added for when the api request fails.    
-- Went through the testing documentation and it is slightly outdated as the walkthrough changed to use createActionGroup versus defining and exporting each action individually. You have to replace the imports of onAdd and onRemove with an import of BooksActions.  Then you call BooksActions.onAdd in place of onAdd.      
+- My implementation could be improved.  An error action could be added for when the API request fails.    
+- I went through the testing documentation, and it is slightly outdated, as the walkthrough was changed to use `createActionGroup` versus defining and exporting each action individually. You have to replace the imports of `onAdd` and `onRemove` with an import of `BooksActions`.  Then you call `BooksActions.onAdd` in place of `onAdd`.      
 
 ## Useful Resources
 
