@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 
 import { selectBookCollection, selectBooks } from './state/books.selectors';
@@ -8,7 +8,7 @@ import { BooksActions } from './state/books.actions';
   selector: 'app-root',
   templateUrl: './app.component.html',
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   books$ = this.store.select(selectBooks);
   bookCollection$ = this.store.select(selectBookCollection);
 
@@ -20,7 +20,7 @@ export class AppComponent {
     this.store.dispatch(BooksActions.removeBook({ bookId }));
   }
 
-  constructor(private store: Store) {}
+  constructor(private readonly store: Store) { }
 
   ngOnInit() {
     this.store.dispatch({ type: '[Books Page] Load Books' });

@@ -7,7 +7,7 @@ import { Book } from './books.model';
 
 @Injectable({ providedIn: 'root' })
 export class GoogleBooksService {
-  constructor(private http: HttpClient) {}
+  constructor(private readonly http: HttpClient) { }
 
   getBooks(): Observable<Array<Book>> {
     return this.http
